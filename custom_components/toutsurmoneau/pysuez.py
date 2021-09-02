@@ -108,8 +108,8 @@ class SuezClient():
         data = requests.get(url, headers=self._headers)
 
         try:
-            self.state = int(float(data.json()[int(
-                yesterday_day)-1][1]))
+            self.state = float(data.json()[int(
+                yesterday_day)-1][1])
             self.success = True
             self.attributes['attribution'] = "Data provided by toutsurmoneau.fr"
 

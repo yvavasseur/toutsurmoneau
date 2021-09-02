@@ -7,7 +7,7 @@ from custom_components.toutsurmoneau.pysuez import PySuezError
 import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA, SensorEntity
-from homeassistant.const import CONF_PASSWORD, CONF_USERNAME, VOLUME_LITERS
+from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
 import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
@@ -17,6 +17,7 @@ SCAN_INTERVAL = timedelta(hours=12)
 
 COMPONENT_ICON = "mdi:water-pump"
 COMPONENT_NAME = "Tout sur mon eau Water Client"
+COMPONENT_UNIT = "m3"
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
@@ -67,14 +68,9 @@ class SuezSensor(SensorEntity):
         return self._state
 
     @property
-    def native_value(self):
-        """Return the state of the sensor."""
-        return self._state
-
-    @property
-    def native_unit_of_measurement(self):
+    def unit_of_measurement(self):
         """Return the unit of measurement."""
-        return VOLUME_LITERS
+        return COMPONENT_UNIT
 
     @property
     def extra_state_attributes(self):
