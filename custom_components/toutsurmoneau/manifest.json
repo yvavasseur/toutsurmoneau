@@ -1,0 +1,9 @@
+{
+  "domain": "toutsurmoneau",
+  "name": "Tout sur mon eau Water",
+  "documentation": "https://github.com/schumijo/homeassistant-component/tree/main/toutsurmoneau",
+  "codeowners": ["schumijo"],
+  "version": "1.0",
+  "requirements": [],
+  "iot_class": "cloud_polling"
+}

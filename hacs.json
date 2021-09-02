@@ -1,0 +1,6 @@
+{
+  "name": "Tout sur mon eau",
+  "country": "FR",
+  "render_readme": true,
+  "domains": ["sensor"]
+}
