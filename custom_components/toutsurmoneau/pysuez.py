@@ -109,7 +109,7 @@ class SuezClient():
 
         try:
             self.state = int(float(data.json()[int(
-                yesterday_day)-1][1])*1000)
+                yesterday_day)-1][1]))
             self.success = True
             self.attributes['attribution'] = "Data provided by toutsurmoneau.fr"
 
