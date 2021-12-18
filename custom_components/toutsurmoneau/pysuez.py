@@ -4,7 +4,7 @@ import datetime
 
 
 
-BASE_URI = 'https://www.eauxdesenart.com'
+BASE_URI = 'https://www.seop.fr'
 API_ENDPOINT_LOGIN = '/mon-compte-en-ligne/je-me-connecte'
 API_ENDPOINT_DATA = '/mon-compte-en-ligne/statJData/'
 API_ENDPOINT_HISTORY = '/mon-compte-en-ligne/statMData/'
